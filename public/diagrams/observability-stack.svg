@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img">
+  <title>Observability pipeline from Prometheus metrics through Grafana dashboards to Loki logs and Alertmanager</title>
+  <rect width="800" height="400" fill="#0a0a0f"/>
+  <text x="400" y="40" fill="#e8e8ed" font-family="monospace" font-size="14" text-anchor="middle">Production Observability Stack</text>
+  <rect x="40" y="120" width="140" height="80" rx="6" fill="#27272a" stroke="#22d3ee"/>
+  <text x="110" y="155" fill="#e8e8ed" font-family="monospace" font-size="12" text-anchor="middle">Prometheus</text>
+  <text x="110" y="175" fill="#71717a" font-family="monospace" font-size="10" text-anchor="middle">Metrics</text>
+  <rect x="220" y="120" width="140" height="80" rx="6" fill="#27272a" stroke="#22d3ee"/>
+  <text x="290" y="165" fill="#e8e8ed" font-family="monospace" font-size="12" text-anchor="middle">Grafana</text>
+  <rect x="400" y="120" width="140" height="80" rx="6" fill="#27272a" stroke="#22d3ee"/>
+  <text x="470" y="155" fill="#e8e8ed" font-family="monospace" font-size="12" text-anchor="middle">Loki</text>
+  <text x="470" y="175" fill="#71717a" font-family="monospace" font-size="10" text-anchor="middle">Logs</text>
+  <rect x="580" y="120" width="160" height="80" rx="6" fill="#27272a" stroke="#22d3ee"/>
+  <text x="660" y="155" fill="#e8e8ed" font-family="monospace" font-size="12" text-anchor="middle">Alertmanager</text>
+  <text x="660" y="175" fill="#71717a" font-family="monospace" font-size="10" text-anchor="middle">Alerting</text>
+  <line x1="180" y1="160" x2="220" y2="160" stroke="#22d3ee" stroke-width="2"/>
+  <line x1="360" y1="160" x2="400" y2="160" stroke="#22d3ee" stroke-width="2"/>
+  <line x1="540" y1="160" x2="580" y2="160" stroke="#22d3ee" stroke-width="2"/>
+  <rect x="200" y="260" width="400" height="60" rx="6" fill="none" stroke="#71717a"/>
+  <text x="400" y="295" fill="#71717a" font-family="monospace" font-size="12" text-anchor="middle">Hybrid + Hetzner + GCP Workloads</text>
+  <text x="400" y="380" fill="#71717a" font-family="monospace" font-size="12" text-anchor="middle">99.9% Uptime � Cross-Service Outage Detection</text>
+</svg>

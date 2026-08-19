@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "site",
+  "type": "object",
+  "required": ["owner", "seo", "contact", "footer"],
+  "additionalProperties": false,
+  "properties": {
+    "owner": {
+      "type": "object",
+      "required": ["name", "title", "tagline", "location"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "tagline": { "type": "string", "maxLength": 200 },
+        "summary": { "type": "string", "maxLength": 800 },
+        "location": { "type": "string" },
+        "photo": { "type": "string", "pattern": "^/" }
+      }
+    },
+    "seo": {
+      "type": "object",
+      "required": ["title", "description"],
+      "properties": {
+        "title": { "type": "string", "maxLength": 70 },
+        "description": { "type": "string", "maxLength": 160 },
+        "ogImage": { "type": "string", "pattern": "^/" }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "required": ["email", "linkedin"],
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string", "pattern": "^\\+[0-9]{10,15}$" },
+        "linkedin": { "type": "string", "format": "uri" },
+        "github": { "type": "string", "format": "uri" }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "required": ["pipelineNote", "repositoryUrl"],
+      "properties": {
+        "pipelineNote": { "type": "string" },
+        "repositoryUrl": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

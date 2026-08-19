@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cka",
+    "name": "Certified Kubernetes Administrator (CKA)",
+    "issuer": "Cloud Native Computing Foundation",
+    "issuedDate": "Jun 2026",
+    "badgeImage": "/certifications/cka.jpg",
+    "verificationUrl": "https://www.credly.com/org/the-linux-foundation"
+  },
+  {
+    "id": "aws-cloud-practitioner",
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "issuedDate": "Feb 2025",
+    "badgeImage": "/certifications/aws-cloud-practitioner.jpg",
+    "verificationUrl": "https://www.credly.com/org/amazon-web-services"
+  },
+  {
+    "id": "aws-saa",
+    "name": "AWS Certified Solutions Architect – Associate",
+    "issuer": "Manara",
+    "issuedDate": "May 2026",
+    "badgeImage": "/certifications/aws-saa.jpg",
+    "verificationUrl": "https://www.credly.com/org/amazon-web-services"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "projects",
+  "type": "array",
+  "minItems": 4,
+  "maxItems": 4,
+  "items": {
+    "type": "object",
+    "required": ["slug", "title", "role", "problem", "solution", "stack", "outcome", "diagram"],
+    "additionalProperties": false,
+    "properties": {
+      "slug": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "title": { "type": "string", "minLength": 1 },
+      "role": { "type": "string" },
+      "period": { "type": "string" },
+      "problem": { "type": "string", "minLength": 20 },
+      "solution": { "type": "string", "minLength": 20 },
+      "stack": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 3
+      },
+      "outcome": { "type": "string", "minLength": 10 },
+      "confidentiality": {
+        "type": "string",
+        "enum": ["public", "generic-enterprise"],
+        "default": "public"
+      },
+      "diagram": {
+        "type": "object",
+        "required": ["path", "alt"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^/(diagrams|projects)/[a-z0-9-]+\\.(svg|jpg|jpeg|png)$"
+          },
+          "alt": { "type": "string", "minLength": 10 }
+        }
+      },
+      "screenshot": {
+        "type": "object",
+        "required": ["path", "alt"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^/(diagrams|projects)/[a-z0-9-]+\\.(svg|jpg|jpeg|png)$"
+          },
+          "alt": { "type": "string", "minLength": 10 }
+        }
+      },
+      "displayOrder": { "type": "integer", "minimum": 1, "maximum": 4 }
+    }
+  }
+}

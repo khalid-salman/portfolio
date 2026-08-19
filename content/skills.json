@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "id": "cloud-infrastructure",
+      "name": "Cloud & Infrastructure",
+      "skills": [
+        "GCP",
+        "Google Kubernetes Engine (GKE)",
+        "AWS",
+        "Hetzner Cloud",
+        "Linux",
+        "RHEL",
+        "Ubuntu",
+        "GCP VPC",
+        "Cloud NAT",
+        "Load Balancing",
+        "Cloud DNS",
+        "Cloud Storage",
+        "Artifact Registry"
+      ]
+    },
+    {
+      "id": "cicd-devsecops",
+      "name": "CI/CD & DevSecOps",
+      "skills": [
+        "GitLab CI/CD",
+        "GitHub Actions",
+        "Jenkins",
+        "Docker",
+        "ArgoCD",
+        "Trivy",
+        "SonarQube",
+        "Container Security",
+        "Secrets Management",
+        "Automated Deployments",
+        "Zero-Downtime Releases"
+      ]
+    },
+    {
+      "id": "observability",
+      "name": "Observability & Reliability",
+      "skills": [
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "Alertmanager",
+        "GCP Cloud Monitoring",
+        "Cloud Logging",
+        "Metrics",
+        "Log Aggregation",
+        "Alerting",
+        "99.9% Availability"
+      ]
+    },
+    {
+      "id": "iac-automation",
+      "name": "Infrastructure as Code & Automation",
+      "skills": [
+        "Terraform",
+        "Ansible",
+        "Python",
+        "Bash",
+        "PowerShell",
+        "Infrastructure Provisioning",
+        "Configuration Management",
+        "Automation"
+      ]
+    },
+    {
+      "id": "kubernetes-containers",
+      "name": "Kubernetes & Containers",
+      "skills": [
+        "Kubernetes",
+        "GKE",
+        "Red Hat OpenShift (OKD)",
+        "Docker",
+        "Ingress",
+        "HPA",
+        "RBAC",
+        "Network Policies",
+        "Workload Identity"
+      ]
+    },
+    {
+      "id": "security-networking",
+      "name": "Security & Networking",
+      "skills": [
+        "IAM Least Privilege",
+        "Zero Trust",
+        "Cloud Armor",
+        "VPC Peering",
+        "VPN",
+        "Active Directory",
+        "Keycloak SSO",
+        "Network Security Policies",
+        "DNS",
+        "Public/Private Networking"
+      ]
+    }
+  ]
+}

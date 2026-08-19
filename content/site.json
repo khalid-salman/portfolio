@@ -1,0 +1,25 @@
+{
+  "owner": {
+    "name": "Khalid Salman",
+    "title": "DevOps & Cloud Engineer",
+    "tagline": "Architecting scalable, high availability cloud & Kubernetes infrastructure, OpenShift, Terraform, CI/CD, and enterprise air gapped systems.",
+    "summary": "DevOps & Cloud Infrastructure Engineer specializing in Google Cloud Platform (GCP), AWS, and enterprise Kubernetes/OpenShift orchestration. Proven expertise in architecting zero trust cloud network topologies, designing production grade Infrastructure as Code (IaC) via Terraform and Ansible, and building resilient Python driven CI/CD delivery pipelines. Demonstrated success migrating on premises microservices to containerized Google Kubernetes Engine (GKE) clusters, managing GCP IAM least privilege policies, securing air gapped networks, and maintaining 99.9% availability across multi cloud and high performance GPU cluster infrastructures.",
+    "location": "Riyadh, Saudi Arabia",
+    "photo": "/images/khalid-salman.png"
+  },
+  "seo": {
+    "title": "Khalid Salman — DevOps & Cloud Engineer",
+    "description": "DevOps Engineer: Terraform, GitLab CI/CD, GKE, OpenShift, Prometheus/Grafana. CKA certified. 80%+ faster infra setup, 99.9% uptime.",
+    "ogImage": "/images/khalid-salman.png"
+  },
+  "contact": {
+    "email": "Khalid.salman1996@gmail.com",
+    "phone": "+966599303210",
+    "linkedin": "https://linkedin.com/in/khalid-salman96",
+    "github": "https://github.com/khalid-salman96"
+  },
+  "footer": {
+    "pipelineNote": "This site deploys itself via the GitHub Actions pipeline in this repository.",
+    "repositoryUrl": "https://github.com/khalid-salman96/portfolio"
+  }
+}

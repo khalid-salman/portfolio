@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "experience",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["company", "title", "location", "startDate", "endDate", "highlights"],
+    "properties": {
+      "company": { "type": "string" },
+      "title": { "type": "string" },
+      "location": { "type": "string" },
+      "startDate": { "type": "string", "pattern": "^\\d{2}/\\d{4}$" },
+      "endDate": {
+        "type": "string",
+        "pattern": "^(\\d{2}/\\d{4}|Present)$"
+      },
+      "highlights": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 1,
+        "maxItems": 2
+      },
+      "displayOrder": { "type": "integer" }
+    }
+  }
+}

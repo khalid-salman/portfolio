@@ -1,0 +1,38 @@
+[
+  {
+    "company": "Ebtekar Wakhthor LTD",
+    "title": "DevOps & Cloud Infrastructure Engineer",
+    "location": "Riyadh, Saudi Arabia",
+    "startDate": "05/2025",
+    "endDate": "Present",
+    "highlights": [
+      "Provisioned multi-tenant GCP and AWS environments with modular Terraform and Ansible — custom VPCs, Cloud NAT, and load balancers, reducing setup time by over 80%.",
+      "Managed multi-stage GitLab CI/CD for .NET and Python microservices with Artifact Registry publishing, build caching, and zero-downtime rollouts, cutting feedback loops by 60%."
+    ],
+    "displayOrder": 1
+  },
+  {
+    "company": "Raed IT Services",
+    "title": "Cloud Administrator & Infrastructure Engineer (Part-Time)",
+    "location": "Remote",
+    "startDate": "01/2023",
+    "endDate": "01/2026",
+    "highlights": [
+      "Maintained 99.9% uptime across hybrid and Hetzner Cloud infrastructure through zero-downtime rolling upgrades and host-level resource tuning.",
+      "Deployed Prometheus, Grafana, GCP Cloud Monitoring, Loki, and Alertmanager for distributed monitoring, alerting, and centralized log aggregation."
+    ],
+    "displayOrder": 2
+  },
+  {
+    "company": "Smart Project",
+    "title": "IT Technical Support & Cloud Infrastructure Engineer",
+    "location": "Cairo, Egypt",
+    "startDate": "03/2022",
+    "endDate": "02/2025",
+    "highlights": [
+      "Developed Python, Bash, and PowerShell automation for provisioning, configuration drift remediation, and backup workflows across hybrid environments.",
+      "Automated backup and migration of legacy workloads and databases to GCP Compute Engine using custom automation scripts."
+    ],
+    "displayOrder": 3
+  }
+]

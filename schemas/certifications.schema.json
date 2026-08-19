@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "certifications",
+  "type": "array",
+  "minItems": 3,
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "issuer", "issuedDate", "verificationUrl"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "issuer": { "type": "string" },
+      "issuedDate": { "type": "string", "pattern": "^[A-Za-z]{3} \\d{4}$" },
+      "badgeImage": {
+        "type": "string",
+        "pattern": "^/certifications/[a-z0-9-]+\\.(svg|png|webp|jpg|jpeg)$"
+      },
+      "verificationUrl": { "type": "string", "format": "uri" }
+    }
+  }
+}

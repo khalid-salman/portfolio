@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skills",
+  "type": "object",
+  "required": ["categories"],
+  "properties": {
+    "categories": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "skills"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "cloud-infrastructure",
+              "cicd-devsecops",
+              "observability",
+              "iac-automation",
+              "kubernetes-containers",
+              "security-networking"
+            ]
+          },
+          "name": { "type": "string" },
+          "skills": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+}

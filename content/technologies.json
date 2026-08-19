@@ -1,0 +1,32 @@
+{
+  "technologies": [
+    { "name": "Docker", "slug": "docker", "icon": "/tech-icons/docker.svg" },
+    { "name": "Kubernetes", "slug": "kubernetes", "icon": "/tech-icons/kubernetes.svg" },
+    { "name": "OpenShift", "slug": "openshift", "icon": "/tech-icons/openshift.svg" },
+    { "name": "AWS", "slug": "aws", "icon": "/tech-icons/aws.svg" },
+    { "name": "Amazon S3", "slug": "amazon-s3", "icon": "/tech-icons/amazon-s3.svg" },
+    { "name": "GCP", "slug": "gcp", "icon": "/tech-icons/gcp.svg" },
+    { "name": "GKE On-prem", "slug": "gke-on-prem", "icon": "/tech-icons/gke-on-prem.svg" },
+    { "name": "Azure", "slug": "azure", "icon": "/tech-icons/azure.svg" },
+    {
+      "name": "GitHub Actions",
+      "slug": "github-actions",
+      "icon": "/tech-icons/github-actions.svg"
+    },
+    { "name": "GitLab CI", "slug": "gitlab", "icon": "/tech-icons/gitlab.svg" },
+    { "name": "Jenkins", "slug": "jenkins", "icon": "/tech-icons/jenkins.svg" },
+    { "name": "Prometheus", "slug": "prometheus", "icon": "/tech-icons/prometheus.svg" },
+    { "name": "Grafana", "slug": "grafana", "icon": "/tech-icons/grafana.svg" },
+    { "name": "Ansible", "slug": "ansible", "icon": "/tech-icons/ansible.svg" },
+    { "name": "Argo CD", "slug": "argocd", "icon": "/tech-icons/argocd.svg" },
+    { "name": "Helm", "slug": "helm", "icon": "/tech-icons/helm.svg" },
+    { "name": "NGINX", "slug": "nginx", "icon": "/tech-icons/nginx.svg" },
+    { "name": "Python", "slug": "python", "icon": "/tech-icons/python.svg" },
+    { "name": "Linux", "slug": "linux", "icon": "/tech-icons/linux.svg" },
+    { "name": "Ubuntu", "slug": "ubuntu", "icon": "/tech-icons/ubuntu.svg" },
+    { "name": "Red Hat", "slug": "redhat", "icon": "/tech-icons/redhat.svg" },
+    { "name": "Hetzner", "slug": "hetzner", "icon": "/tech-icons/hetzner.svg" },
+    { "name": "PostgreSQL", "slug": "postgresql", "icon": "/tech-icons/postgresql.svg" },
+    { "name": "MongoDB", "slug": "mongodb", "icon": "/tech-icons/mongodb.svg" }
+  ]
+}

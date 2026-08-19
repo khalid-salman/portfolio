@@ -1,0 +1,24 @@
+{
+  "metrics": [
+    {
+      "value": "80%+",
+      "label": "Infra setup time reduction",
+      "description": "Modular Terraform & Ansible across GCP and AWS"
+    },
+    {
+      "value": "60%",
+      "label": "Faster CI/CD feedback loops",
+      "description": "GitLab CI/CD for .NET & Python microservices"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime maintained",
+      "description": "Hybrid Hetzner + GCP production environments"
+    },
+    {
+      "value": "Multi-cloud",
+      "label": "Regulated production experience",
+      "description": "Banking, government, SaaS & air-gapped systems"
+    }
+  ]
+}
