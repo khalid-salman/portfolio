@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { assetPath } from '@/lib/assetPath';
 
 interface TechIconProps {
   icon: string;
@@ -9,7 +10,7 @@ interface TechIconProps {
 export function TechIcon({ icon, name, className = 'h-8 w-8' }: TechIconProps) {
   return (
     <Image
-      src={icon}
+      src={assetPath(icon)}
       alt=""
       width={40}
       height={40}

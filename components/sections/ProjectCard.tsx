@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/Badge';
+import { assetPath } from '@/lib/assetPath';
 import type { Project } from '@/lib/types';
 
 interface ProjectCardProps {
@@ -22,7 +23,7 @@ function ProjectImage({
       <div className="overflow-hidden rounded border border-border bg-surface-container-high p-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={path}
+          src={assetPath(path)}
           alt={alt}
           className="mx-auto h-auto w-full max-w-full rounded-sm object-contain"
           loading="lazy"

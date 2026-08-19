@@ -3,6 +3,7 @@ import { Hanken_Grotesk, JetBrains_Mono } from 'next/font/google';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { site } from '@/lib/content';
+import { assetPath } from '@/lib/assetPath';
 import './globals.css';
 
 const hanken = Hanken_Grotesk({
@@ -18,7 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://khalidsalman.dev'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://khalid-salman.github.io/portfolio',
+  ),
   title: site.seo.title,
   description: site.seo.description,
   openGraph: {
@@ -41,7 +44,7 @@ const jsonLd = {
   name: site.owner.name,
   jobTitle: site.owner.title,
   email: site.contact.email,
-  ...(site.owner.photo ? { image: site.owner.photo } : {}),
+  ...(site.owner.photo ? { image: assetPath(site.owner.photo) } : {}),
   ...(site.contact.phone ? { telephone: site.contact.phone } : {}),
   address: {
     '@type': 'PostalAddress',

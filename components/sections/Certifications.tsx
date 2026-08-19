@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { MotionReveal } from '@/components/ui/MotionReveal';
 import { Section } from '@/components/ui/Section';
 import { certifications } from '@/lib/content';
+import { assetPath } from '@/lib/assetPath';
 
 export function Certifications() {
   return (
@@ -19,7 +20,7 @@ export function Certifications() {
               {cert.badgeImage && (
                 <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-border bg-surface-container-high">
                   <Image
-                    src={cert.badgeImage}
+                    src={assetPath(cert.badgeImage)}
                     alt={`${cert.name} certificate`}
                     fill
                     className="object-contain p-2"

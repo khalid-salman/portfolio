@@ -3,6 +3,7 @@ import { MapPin, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { MotionReveal } from '@/components/ui/MotionReveal';
 import { site } from '@/lib/content';
+import { assetPath } from '@/lib/assetPath';
 
 export function Hero() {
   const { owner, contact } = site;
@@ -40,7 +41,7 @@ export function Hero() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button href="#projects">&gt; View Projects</Button>
-                <Button variant="secondary" href="/resume.pdf" download>
+                <Button variant="secondary" href={assetPath('/resume.pdf')} download>
                   &gt; Download Resume
                 </Button>
                 <Button variant="ghost" href={`mailto:${contact.email}`}>
@@ -56,7 +57,7 @@ export function Hero() {
                 {owner.photo && (
                   <div className="relative aspect-[4/5] w-full overflow-hidden border-b border-border bg-surface-container">
                     <Image
-                      src={owner.photo}
+                      src={assetPath(owner.photo)}
                       alt={`${owner.name}, professional photo`}
                       fill
                       className="object-cover object-top"

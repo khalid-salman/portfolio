@@ -1,4 +1,5 @@
 import { Mail, MapPin, Linkedin, Download, Phone } from 'lucide-react';
+import { assetPath } from '@/lib/assetPath';
 import { Button } from '@/components/ui/Button';
 import { MotionReveal } from '@/components/ui/MotionReveal';
 import { Section } from '@/components/ui/Section';
@@ -52,7 +53,7 @@ export function Contact() {
             </li>
           </ul>
           <div className="mt-8">
-            <Button href="/resume.pdf" download>
+            <Button href={assetPath('/resume.pdf')} download>
               <Download className="h-4 w-4" aria-hidden />
               Download Resume
             </Button>
