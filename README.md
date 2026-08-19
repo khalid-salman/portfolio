@@ -28,3 +28,10 @@ npx serve out
 ## Deploy
 
 Pushes to `new_version` trigger `.github/workflows/deploy.yml` (lint → validate → build → Trivy → GitHub Pages).
+
+### One-time GitHub setup
+
+1. **Pages source:** Settings → Pages → Build and deployment → **GitHub Actions**
+2. **Allow `new_version` to deploy:** Settings → Environments → **github-pages** → Deployment branches → add **`new_version`** (or choose **All branches**)
+
+Without step 2, the deploy job fails with: *Branch "new_version" is not allowed to deploy to github-pages*.
