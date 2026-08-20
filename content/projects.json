@@ -1,53 +1,42 @@
 [
   {
-    "slug": "clinic-plus",
-    "title": "Clinic+ — Dual-Cloud SaaS Infrastructure & AI Platform",
-    "role": "DevOps & Cloud Architect",
-    "period": "05/2026 – 08/2026",
-    "problem": "Healthcare SaaS platform required strict staging/production isolation across two clouds, with zero-downtime releases and a production AI workload behind secure gateways.",
-    "solution": "Architected Hetzner Cloud staging alongside GCP production — GKE, GCS, Secret Manager, Cloud Load Balancing, Cloud DNS, Cloud IAM, and Cloud Armor rate limiting. Built GitHub Actions with self-hosted runners for container builds, forward-only DB migrations, and zero-downtime GKE rollouts.",
-    "stack": ["GCP", "GKE", "Hetzner Cloud", "Terraform", "GitHub Actions", "Cloud Armor", "FastAPI"],
-    "outcome": "Production-grade dual-cloud platform with hardened workloads (health probes, RBAC, Cloud Monitoring) and a live AI Medical Assistant in production.",
-    "confidentiality": "public",
+    "slug": "al-rajhi-tawtheeq",
+    "title": "Enterprise Document Archiving System (Financial Sector)",
+    "role": "DevOps & OpenShift Engineer",
+    "period": "09/2025 – 04/2026",
+    "problem": "A tier-1 banking ecosystem supporting 15M+ active users needed a compliant, repeatable deployment model for an enterprise document archiving platform across DEV, SIT, UAT, and PROD under strict financial regulatory SLAs.",
+    "solution": "Managed multi-environment Red Hat OpenShift (OKD) infrastructure with fine-grained network isolation, RBAC, and Keycloak SSO. Integrated containerized workloads with IBM FileNet for document management, IBM MQ for transactional messaging, and RabbitMQ for microservice event queuing. Designed GitLab CI/CD pipelines with compliance and vulnerability scanning before every production release.",
+    "stack": [
+      "OpenShift",
+      "OKD",
+      "IBM FileNet",
+      "IBM MQ",
+      "RabbitMQ",
+      "GitLab CI/CD",
+      "Keycloak",
+      "Trivy"
+    ],
+    "outcome": "Supported heavy enterprise throughput, processing millions of document ingestions, messaging events, and OCR API extractions daily under audit-ready regulatory controls.",
+    "confidentiality": "generic-enterprise",
     "diagram": {
-      "path": "/projects/clinic-plus-flow.jpg",
-      "alt": "Clinic+ dual-cloud architecture flow — Hetzner staging and GCP GKE production"
+      "path": "/projects/al-rajhi-tawtheeq-flow.jpg",
+      "alt": "Enterprise archiving system deployment flow across OpenShift environments with FileNet and messaging"
     },
     "screenshot": {
-      "path": "/projects/clinic-plus-mainpage.png",
-      "alt": "Clinic+ production main page — live healthcare SaaS platform"
+      "path": "/projects/al-rajhi-tawtheeq-mainpage.png",
+      "alt": "Enterprise archiving production main page"
     },
     "displayOrder": 1
   },
   {
-    "slug": "al-rajhi-tawtheeq",
-    "title": "Al Rajhi Bank — Enterprise Archiving System (Tawtheeq)",
-    "role": "DevOps & OpenShift Engineer",
-    "period": "09/2025 – 04/2026",
-    "problem": "Top-tier bank needed a compliant, repeatable deployment model for an enterprise archiving platform across DEV, SIT, UAT, and PROD under strict financial regulatory requirements.",
-    "solution": "Managed Red Hat OpenShift (OKD) clusters with Kubernetes network isolation, secret management integrations, RBAC, and Keycloak SSO. Designed GitLab CI/CD pipelines with container compliance scanning before every production deployment.",
-    "stack": ["OpenShift", "OKD", "Kubernetes", "GitLab CI/CD", "Keycloak", "RBAC", "Trivy"],
-    "outcome": "Audit-compliant, repeatable pipeline delivering regulated archiving infrastructure without exposing internal system details.",
-    "confidentiality": "generic-enterprise",
-    "diagram": {
-      "path": "/projects/al-rajhi-tawtheeq-flow.jpg",
-      "alt": "Al Rajhi Tawtheeq enterprise archiving system deployment flow across OpenShift environments"
-    },
-    "screenshot": {
-      "path": "/projects/al-rajhi-tawtheeq-mainpage.png",
-      "alt": "Al Rajhi Tawtheeq production main page — enterprise archiving system"
-    },
-    "displayOrder": 2
-  },
-  {
     "slug": "saudi-ministry-gis",
-    "title": "Saudi Ministry System — Air-Gapped GIS & GPU Infrastructure",
+    "title": "Enterprise GIS & Cloud Infrastructure (Government Sector)",
     "role": "Lead Cloud & DevOps Engineer",
     "period": "06/2025 – 03/2026",
-    "problem": "Legacy GIS platform required modernization in a fully air-gapped government environment, including AI/GPU capacity and zero-trust ingress/egress controls.",
-    "solution": "Architected containerized GIS microservices on air-gapped Kubernetes with isolated network boundaries and internal DNS. Automated GPU cluster node provisioning and bare-metal software stacks using Python, Terraform, and Ansible.",
+    "problem": "Legacy GIS applications required modernization in a fully air-gapped government environment, including GPU-accelerated capacity and zero-trust ingress/egress controls.",
+    "solution": "Architected air-gapped Kubernetes environments and GPU-accelerated clusters. Provisioned bare-metal GPU nodes and Kubernetes infrastructure using Python, Terraform, and Ansible. Implemented isolated network boundaries, internal DNS, and zero-trust ingress/egress policies for high-security compliance.",
     "stack": ["Kubernetes", "Terraform", "Ansible", "Python", "Zero Trust", "GPU", "GIS"],
-    "outcome": "Modernized, secured, automation-first infrastructure at scale — from legacy GIS to containerized microservices with GPU compute.",
+    "outcome": "Modernized, secured, automation-first infrastructure at scale from legacy GIS to containerized microservices with GPU compute.",
     "confidentiality": "generic-enterprise",
     "diagram": {
       "path": "/projects/saudi-ministry-gis-flow.jpg",
@@ -56,6 +45,26 @@
     "screenshot": {
       "path": "/projects/saudi-ministry-gis-mainpage.png",
       "alt": "Saudi Ministry production main page — GIS platform interface"
+    },
+    "displayOrder": 2
+  },
+  {
+    "slug": "clinic-plus",
+    "title": "Dual-Cloud SaaS Infrastructure & AI Platform",
+    "role": "DevOps & Cloud Architect",
+    "period": "05/2026 – 08/2026",
+    "problem": "Healthcare SaaS platform required a dual-cloud production ecosystem with strict staging/production isolation, zero-downtime releases, and a production AI workload behind secure gateways.",
+    "solution": "Architected staging on Hetzner Cloud and live microservices on GKE. Built self-hosted GitHub Actions runners for container builds, database migrations, and zero-downtime GKE deployments. Hardened workloads with Cloud Armor, RBAC, health probes, and Cloud Monitoring.",
+    "stack": ["GCP", "GKE", "Hetzner Cloud", "Terraform", "GitHub Actions", "Cloud Armor", "FastAPI"],
+    "outcome": "Reduced infrastructure setup time by over 80% using modular Terraform, delivering a production-grade dual-cloud platform with a live AI Medical Assistant.",
+    "confidentiality": "public",
+    "diagram": {
+      "path": "/projects/clinic-plus-flow.jpg",
+      "alt": "Dual-cloud architecture flow — Hetzner staging and GCP GKE production"
+    },
+    "screenshot": {
+      "path": "/projects/clinic-plus-mainpage.png",
+      "alt": "Clinic+ production main page — live healthcare SaaS platform"
     },
     "displayOrder": 3
   },

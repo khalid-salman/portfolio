@@ -5,7 +5,7 @@ import { projects } from '@/lib/content';
 
 export function Projects() {
   return (
-    <Section id="projects" title="Flagship Projects">
+    <Section id="projects" title="Featured Enterprise Case Studies">
       <div className="space-y-8">
         {projects.map((project, index) => (
           <MotionReveal key={project.slug} delay={index * 0.05}>

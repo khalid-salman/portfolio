@@ -6,7 +6,7 @@ import { site } from '@/lib/content';
 import { assetPath } from '@/lib/assetPath';
 
 export function Hero() {
-  const { owner, contact } = site;
+  const { owner } = site;
 
   return (
     <section id="hero" className="relative scroll-mt-20 border-b border-border py-16 md:py-24">
@@ -40,12 +40,12 @@ export function Hero() {
                 {owner.location}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button href="#projects">&gt; View Projects</Button>
-                <Button variant="secondary" href={assetPath('/resume.pdf')} download>
-                  &gt; Download Resume
+                <Button href="#projects">&gt; View Case Studies</Button>
+                <Button variant="secondary" href="#contact">
+                  &gt; Get in Touch
                 </Button>
-                <Button variant="ghost" href={`mailto:${contact.email}`}>
-                  &gt; Email Me
+                <Button variant="ghost" href={assetPath('/resume.pdf')} download>
+                  &gt; Download Resume
                 </Button>
               </div>
             </MotionReveal>
@@ -83,7 +83,7 @@ export function Hero() {
                     </div>
                     <div className="grid grid-cols-[90px_1fr] gap-3">
                       <dt className="text-on-surface-variant">Top Tools</dt>
-                      <dd className="text-on-surface">&gt; K8s, Terraform, OpenShift</dd>
+                      <dd className="text-on-surface">&gt; OpenShift, K8s, IBM MQ</dd>
                     </div>
                     <div className="grid grid-cols-[90px_1fr] gap-3">
                       <dt className="text-on-surface-variant">Certs</dt>

@@ -1,39 +1,55 @@
 {
   "categories": [
     {
-      "id": "cloud-infrastructure",
-      "name": "Cloud & Infrastructure",
+      "id": "kubernetes-containers",
+      "name": "Container Orchestration & Platforms",
       "skills": [
-        "GCP",
-        "Google Kubernetes Engine (GKE)",
-        "AWS",
-        "Hetzner Cloud",
-        "Linux",
-        "RHEL",
-        "Ubuntu",
-        "GCP VPC",
-        "Cloud NAT",
-        "Load Balancing",
-        "Cloud DNS",
-        "Cloud Storage",
-        "Artifact Registry"
+        "Red Hat OpenShift (OKD)",
+        "Kubernetes (GKE)",
+        "Docker",
+        "Workload Identity",
+        "Ingress",
+        "HPA",
+        "Network Isolation"
+      ]
+    },
+    {
+      "id": "enterprise-messaging",
+      "name": "Enterprise Messaging & Integration",
+      "skills": [
+        "IBM MQ",
+        "RabbitMQ",
+        "IBM FileNet ECM",
+        "Kafka",
+        "Event-Driven Architecture",
+        "Asynchronous Microservices"
       ]
     },
     {
       "id": "cicd-devsecops",
-      "name": "CI/CD & DevSecOps",
+      "name": "GitOps & Delivery",
       "skills": [
+        "ArgoCD",
         "GitLab CI/CD",
         "GitHub Actions",
         "Jenkins",
-        "Docker",
-        "ArgoCD",
+        "Automated Rolling Upgrades",
+        "Zero-Downtime Releases",
         "Trivy",
-        "SonarQube",
-        "Container Security",
-        "Secrets Management",
-        "Automated Deployments",
-        "Zero-Downtime Releases"
+        "SonarQube"
+      ]
+    },
+    {
+      "id": "iac-automation",
+      "name": "Infrastructure as Code",
+      "skills": [
+        "Terraform",
+        "Ansible",
+        "Python",
+        "Bash",
+        "PowerShell",
+        "Automated Provisioning",
+        "Drift Remediation"
       ]
     },
     {
@@ -45,56 +61,38 @@
         "Loki",
         "Alertmanager",
         "GCP Cloud Monitoring",
-        "Cloud Logging",
-        "Metrics",
         "Log Aggregation",
-        "Alerting",
-        "99.9% Availability"
-      ]
-    },
-    {
-      "id": "iac-automation",
-      "name": "Infrastructure as Code & Automation",
-      "skills": [
-        "Terraform",
-        "Ansible",
-        "Python",
-        "Bash",
-        "PowerShell",
-        "Infrastructure Provisioning",
-        "Configuration Management",
-        "Automation"
-      ]
-    },
-    {
-      "id": "kubernetes-containers",
-      "name": "Kubernetes & Containers",
-      "skills": [
-        "Kubernetes",
-        "GKE",
-        "Red Hat OpenShift (OKD)",
-        "Docker",
-        "Ingress",
-        "HPA",
-        "RBAC",
-        "Network Policies",
-        "Workload Identity"
+        "99.9% Uptime SLA"
       ]
     },
     {
       "id": "security-networking",
-      "name": "Security & Networking",
+      "name": "DevSecOps & Security",
       "skills": [
         "IAM Least Privilege",
         "Zero Trust",
-        "Cloud Armor",
-        "VPC Peering",
-        "VPN",
-        "Active Directory",
+        "RBAC",
+        "Trivy Scanning",
+        "SonarQube Quality Gates",
         "Keycloak SSO",
-        "Network Security Policies",
-        "DNS",
-        "Public/Private Networking"
+        "Cloud Armor"
+      ]
+    },
+    {
+      "id": "cloud-infrastructure",
+      "name": "Cloud & Infrastructure",
+      "skills": [
+        "GCP",
+        "AWS",
+        "Hetzner Cloud",
+        "Linux",
+        "RHEL",
+        "Ubuntu",
+        "GCP VPC",
+        "Cloud NAT",
+        "Load Balancing",
+        "Cloud DNS",
+        "Artifact Registry"
       ]
     }
   ]

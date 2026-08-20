@@ -68,7 +68,8 @@ export type SkillCategoryId =
   | 'observability'
   | 'iac-automation'
   | 'kubernetes-containers'
-  | 'security-networking';
+  | 'security-networking'
+  | 'enterprise-messaging';
 
 export interface SkillCategory {
   id: SkillCategoryId;

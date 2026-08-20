@@ -1,15 +1,15 @@
 {
   "owner": {
     "name": "Khalid Salman",
-    "title": "DevOps & Cloud Engineer",
-    "tagline": "Architecting scalable, high availability cloud & Kubernetes infrastructure, OpenShift, Terraform, CI/CD, and enterprise air gapped systems.",
-    "summary": "DevOps & Cloud Infrastructure Engineer specializing in Google Cloud Platform (GCP), AWS, and enterprise Kubernetes/OpenShift orchestration. Proven expertise in architecting zero trust cloud network topologies, designing production grade Infrastructure as Code (IaC) via Terraform and Ansible, and building resilient Python driven CI/CD delivery pipelines. Demonstrated success migrating on premises microservices to containerized Google Kubernetes Engine (GKE) clusters, managing GCP IAM least privilege policies, securing air gapped networks, and maintaining 99.9% availability across multi cloud and high performance GPU cluster infrastructures.",
+    "title": "Senior DevOps, OpenShift & Kubernetes Engineer",
+    "tagline": "Designing high availability, secure, and automated cloud infrastructure for enterprise banking, government, and dual cloud platforms.",
+    "summary": "DevOps & Cloud Infrastructure Engineer specializing in Google Cloud Platform (GCP), AWS, and enterprise Kubernetes/OpenShift orchestration. Proven expertise in architecting zero trust cloud network topologies, designing production grade Infrastructure as Code (IaC) via Terraform and Ansible, and building resilient Python driven CI/CD delivery pipelines. Demonstrated success integrating OpenShift workloads with IBM FileNet, IBM MQ, and RabbitMQ, migrating on premises microservices to containerized GKE clusters, securing air gapped networks, and maintaining 99.9% availability across multi cloud and high performance GPU cluster infrastructures.",
     "location": "Riyadh, Saudi Arabia",
     "photo": "/images/khalid-salman.png"
   },
   "seo": {
-    "title": "Khalid Salman — DevOps & Cloud Engineer",
-    "description": "DevOps Engineer: Terraform, GitLab CI/CD, GKE, OpenShift, Prometheus/Grafana. CKA certified. 80%+ faster infra setup, 99.9% uptime.",
+    "title": "Khalid Salman — Senior DevOps & OpenShift Engineer",
+    "description": "Senior DevOps Engineer: OpenShift, Kubernetes, IBM MQ, FileNet, Terraform, GKE. CKA certified. Banking & government platforms.",
     "ogImage": "/images/khalid-salman.png"
   },
   "contact": {
@@ -20,6 +20,6 @@
   },
   "footer": {
     "pipelineNote": "This site deploys itself via the GitHub Actions pipeline in this repository.",
-    "repositoryUrl": "https://github.com/khalid-salman96/portfolio"
+    "repositoryUrl": "https://github.com/khalid-salman/portfolio"
   }
 }

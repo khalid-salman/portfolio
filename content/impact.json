@@ -1,18 +1,18 @@
 {
   "metrics": [
     {
+      "value": "15M+",
+      "label": "Banking users supported",
+      "description": "OpenShift archiving with FileNet, IBM MQ & RabbitMQ"
+    },
+    {
       "value": "80%+",
       "label": "Infra setup time reduction",
       "description": "Modular Terraform & Ansible across GCP and AWS"
     },
     {
-      "value": "60%",
-      "label": "Faster CI/CD feedback loops",
-      "description": "GitLab CI/CD for .NET & Python microservices"
-    },
-    {
       "value": "99.9%",
-      "label": "Uptime maintained",
+      "label": "Uptime SLA maintained",
       "description": "Hybrid Hetzner + GCP production environments"
     },
     {
