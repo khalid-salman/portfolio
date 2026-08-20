@@ -73,7 +73,8 @@ footer p {
   text-justify: inter-word;
 }
 
-main p.flex {
+main p.flex,
+main p.text-start {
   text-align: start;
 }
 

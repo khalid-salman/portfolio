@@ -74,6 +74,16 @@ for (const project of projects) {
       failed = true;
     }
   }
+
+  if (project.architectureDiagram) {
+    const archPath = join(root, 'public', project.architectureDiagram.path.replace(/^\//, ''));
+    if (!existsSync(archPath)) {
+      console.error(
+        `✗ Missing architecture diagram for project "${project.slug}": expected public${project.architectureDiagram.path}`,
+      );
+      failed = true;
+    }
+  }
 }
 
 const technologiesDoc = loadJson('content/technologies.json');

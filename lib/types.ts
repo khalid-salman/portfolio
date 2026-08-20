@@ -47,6 +47,22 @@ export interface DiagramRef {
   alt: string;
 }
 
+export interface ProjectMetric {
+  value: string;
+  label: string;
+}
+
+export interface ProjectArtifact {
+  label: string;
+  url: string;
+}
+
+export interface ProjectSnippet {
+  title: string;
+  language: string;
+  code: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -58,7 +74,11 @@ export interface Project {
   outcome: string;
   confidentiality?: 'public' | 'generic-enterprise';
   diagram: DiagramRef;
+  architectureDiagram?: DiagramRef;
   screenshot?: DiagramRef;
+  metrics?: ProjectMetric[];
+  artifacts?: ProjectArtifact[];
+  snippets?: ProjectSnippet[];
   displayOrder?: number;
 }
 

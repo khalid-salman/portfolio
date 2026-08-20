@@ -16,8 +16,13 @@
       "Keycloak",
       "Trivy"
     ],
-    "outcome": "Supported heavy enterprise throughput, processing millions of document ingestions, messaging events, and OCR API extractions daily under audit-ready regulatory controls.",
+    "outcome": "Supported heavy enterprise throughput across four regulated environments, processing millions of document ingestions, messaging events, and OCR API extractions daily under audit-ready controls.",
     "confidentiality": "generic-enterprise",
+    "metrics": [
+      { "value": "15M+", "label": "Active banking users supported" },
+      { "value": "4", "label": "Environments (DEV/SIT/UAT/PROD)" },
+      { "value": "Millions/day", "label": "Doc + MQ + OCR events" }
+    ],
     "diagram": {
       "path": "/projects/al-rajhi-tawtheeq-flow.jpg",
       "alt": "Enterprise archiving system deployment flow across OpenShift environments with FileNet and messaging"
@@ -26,6 +31,13 @@
       "path": "/projects/al-rajhi-tawtheeq-mainpage.png",
       "alt": "Enterprise archiving production main page"
     },
+    "snippets": [
+      {
+        "title": "OpenShift NetworkPolicy (sanitized)",
+        "language": "yaml",
+        "code": "apiVersion: networking.k8s.io/v1\nkind: NetworkPolicy\nmetadata:\n  name: filenet-ingress-allow\n  namespace: archiving-prod\nspec:\n  podSelector:\n    matchLabels:\n      app: filenet-connector\n  policyTypes: [Ingress, Egress]\n  ingress:\n    - from:\n        - podSelector:\n            matchLabels:\n              app: api-gateway\n      ports:\n        - protocol: TCP\n          port: 9080\n  egress:\n    - to:\n        - podSelector:\n            matchLabels:\n              app: ibm-mq\n      ports:\n        - protocol: TCP\n          port: 1414"
+      }
+    ],
     "displayOrder": 1
   },
   {
@@ -36,8 +48,13 @@
     "problem": "Legacy GIS applications required modernization in a fully air-gapped government environment, including GPU-accelerated capacity and zero-trust ingress/egress controls.",
     "solution": "Architected air-gapped Kubernetes environments and GPU-accelerated clusters. Provisioned bare-metal GPU nodes and Kubernetes infrastructure using Python, Terraform, and Ansible. Implemented isolated network boundaries, internal DNS, and zero-trust ingress/egress policies for high-security compliance.",
     "stack": ["Kubernetes", "Terraform", "Ansible", "Python", "Zero Trust", "GPU", "GIS"],
-    "outcome": "Modernized, secured, automation-first infrastructure at scale from legacy GIS to containerized microservices with GPU compute.",
+    "outcome": "Provisioned an 8× NVIDIA H100 GPU cluster on bare-metal, reducing spatial query processing latencies by ~40%, while keeping the platform fully air-gapped under zero-trust controls.",
     "confidentiality": "generic-enterprise",
+    "metrics": [
+      { "value": "8× H100", "label": "Bare-metal GPU cluster" },
+      { "value": "~40%", "label": "Spatial query latency reduction" },
+      { "value": "Air-gapped", "label": "Zero-trust boundary model" }
+    ],
     "diagram": {
       "path": "/projects/saudi-ministry-gis-flow.jpg",
       "alt": "Saudi Ministry air-gapped GIS and GPU infrastructure architecture flow"
@@ -46,6 +63,19 @@
       "path": "/projects/saudi-ministry-gis-mainpage.png",
       "alt": "Saudi Ministry production main page — GIS platform interface"
     },
+    "artifacts": [
+      {
+        "label": "Terraform GKE hardening sample",
+        "url": "https://github.com/khalid-salman/portfolio/blob/new_version/samples/terraform/gke-hardening.tf"
+      }
+    ],
+    "snippets": [
+      {
+        "title": "Bare-metal GPU node bootstrap (sanitized Ansible)",
+        "language": "yaml",
+        "code": "- name: Install NVIDIA drivers & container toolkit\n  hosts: gpu_nodes\n  become: true\n  tasks:\n    - name: Ensure GPU driver packages\n      ansible.builtin.apt:\n        name:\n          - nvidia-driver-550\n          - nvidia-container-toolkit\n        state: present\n        update_cache: true\n\n    - name: Register GPU with container runtime\n      ansible.builtin.command: nvidia-ctk runtime configure --runtime=containerd\n      notify: Restart containerd\n\n  handlers:\n    - name: Restart containerd\n      ansible.builtin.service:\n        name: containerd\n        state: restarted"
+      }
+    ],
     "displayOrder": 2
   },
   {
@@ -56,8 +86,13 @@
     "problem": "Healthcare SaaS platform required a dual-cloud production ecosystem with strict staging/production isolation, zero-downtime releases, and a production AI workload behind secure gateways.",
     "solution": "Architected staging on Hetzner Cloud and live microservices on GKE. Built self-hosted GitHub Actions runners for container builds, database migrations, and zero-downtime GKE deployments. Hardened workloads with Cloud Armor, RBAC, health probes, and Cloud Monitoring.",
     "stack": ["GCP", "GKE", "Hetzner Cloud", "Terraform", "GitHub Actions", "Cloud Armor", "FastAPI"],
-    "outcome": "Reduced infrastructure setup time by over 80% using modular Terraform, delivering a production-grade dual-cloud platform with a live AI Medical Assistant.",
+    "outcome": "Cut infrastructure setup time by 80%+ with modular Terraform, and reduced staging-to-production deployment cycles from hours to under 10 minutes with forward-only migrations and rolling GKE updates.",
     "confidentiality": "public",
+    "metrics": [
+      { "value": "80%+", "label": "Infra setup time reduction" },
+      { "value": "<10 min", "label": "Staging → prod deploy cycle" },
+      { "value": "Zero downtime", "label": "GKE rolling releases" }
+    ],
     "diagram": {
       "path": "/projects/clinic-plus-flow.jpg",
       "alt": "Dual-cloud architecture flow — Hetzner staging and GCP GKE production"
@@ -66,6 +101,27 @@
       "path": "/projects/clinic-plus-mainpage.png",
       "alt": "Clinic+ production main page — live healthcare SaaS platform"
     },
+    "artifacts": [
+      {
+        "label": "Terraform GKE hardening sample",
+        "url": "https://github.com/khalid-salman/portfolio/blob/new_version/samples/terraform/gke-hardening.tf"
+      },
+      {
+        "label": "Zero-downtime GitHub Actions workflow",
+        "url": "https://github.com/khalid-salman/portfolio/blob/new_version/samples/github-actions/zero-downtime-gke.yml"
+      },
+      {
+        "label": "Hardened Helm values excerpt",
+        "url": "https://github.com/khalid-salman/portfolio/blob/new_version/samples/helm/microservice-values.yaml"
+      }
+    ],
+    "snippets": [
+      {
+        "title": "Terraform private GKE excerpt",
+        "language": "hcl",
+        "code": "private_cluster_config {\n  enable_private_nodes    = true\n  enable_private_endpoint = false\n  master_ipv4_cidr_block  = \"172.16.0.0/28\"\n}\n\nworkload_identity_config {\n  workload_pool = \"${var.project_id}.svc.id.goog\"\n}"
+      }
+    ],
     "displayOrder": 3
   },
   {
@@ -76,12 +132,30 @@
     "problem": "Hybrid Hetzner and GCP infrastructure lacked unified observability — cross-service outages were detected late and root cause was slow to identify.",
     "solution": "Deployed Prometheus, Grafana, Loki, and Alertmanager alongside GCP Cloud Monitoring and Cloud Logging for distributed metrics, centralized log aggregation, and actionable alerting across hybrid workloads.",
     "stack": ["Prometheus", "Grafana", "Loki", "Alertmanager", "GCP Monitoring", "Hetzner Cloud"],
-    "outcome": "Improved cross-service outage detection and faster incident identification across hybrid production infrastructure.",
+    "outcome": "Improved cross-service outage detection and faster incident identification across hybrid production infrastructure, supporting a sustained 99.9% availability target.",
     "confidentiality": "public",
+    "metrics": [
+      { "value": "99.9%", "label": "Availability target held" },
+      { "value": "Hybrid", "label": "Hetzner + GCP coverage" },
+      { "value": "Unified", "label": "Metrics + logs + alerts" }
+    ],
     "diagram": {
       "path": "/projects/observability-stack-flow.jpg",
       "alt": "Production observability stack flow — Prometheus, Grafana, Loki, and Alertmanager across hybrid infrastructure"
     },
+    "artifacts": [
+      {
+        "label": "Prometheus / Alertmanager rule pack",
+        "url": "https://github.com/khalid-salman/portfolio/blob/new_version/samples/prometheus/alert-rules.yml"
+      }
+    ],
+    "snippets": [
+      {
+        "title": "Alertmanager rule (sanitized)",
+        "language": "yaml",
+        "code": "- alert: HighErrorRate\n  expr: |\n    sum(rate(http_requests_total{status=~\"5..\"}[5m])) by (service)\n      /\n    sum(rate(http_requests_total[5m])) by (service)\n      > 0.05\n  for: 10m\n  labels:\n    severity: critical\n  annotations:\n    summary: \"Elevated 5xx rate on {{ $labels.service }}\""
+      }
+    ],
     "displayOrder": 4
   }
 ]

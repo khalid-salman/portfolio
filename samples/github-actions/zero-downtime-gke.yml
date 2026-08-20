@@ -1,0 +1,29 @@
+# Sanitized zero-downtime GKE rollout excerpt (GitHub Actions)
+name: Deploy API (forward-only)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "services/api/**"
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build & scan image
+        run: |
+          docker build -t "$IMAGE:$SHA" services/api
+          trivy image --severity HIGH,CRITICAL --exit-code 1 "$IMAGE:$SHA"
+
+      - name: Forward-only DB migrate
+        run: |
+          kubectl -n prod exec deploy/api-migrate -- \
+            python -m alembic upgrade head
+
+      - name: Rolling update (zero downtime)
+        run: |
+          kubectl -n prod set image deploy/api api="$IMAGE:$SHA"
+          kubectl -n prod rollout status deploy/api --timeout=10m
