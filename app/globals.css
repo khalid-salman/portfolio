@@ -66,6 +66,17 @@ body {
   background-size: var(--grid-size) var(--grid-size);
 }
 
+main p,
+main li,
+footer p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+main p.flex {
+  text-align: start;
+}
+
 .theme-ambient-glow {
   pointer-events: none;
   position: absolute;
@@ -76,6 +87,23 @@ body {
   border-radius: 9999px;
   background: var(--ambient-glow);
   filter: blur(100px);
+}
+
+/* Near-black logos: blue tint in dark theme only */
+.tech-icon-dark-tint {
+  background-color: #0d549c;
+}
+
+.tech-icon-light-only {
+  display: none;
+}
+
+html.light .tech-icon-dark-only {
+  display: none;
+}
+
+html.light .tech-icon-light-only {
+  display: inline-block;
 }
 
 .light .theme-ambient-glow {

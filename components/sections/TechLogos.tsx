@@ -16,7 +16,12 @@ export function TechLogos() {
         {technologies.map((tech, index) => (
           <MotionReveal key={tech.slug} delay={index * 0.03}>
             <div className="hud-card flex flex-col items-center justify-center gap-3 p-4 text-center transition-colors hover:border-primary-container/30">
-              <TechIcon icon={tech.icon} name={tech.name} className="h-10 w-10" />
+              <TechIcon
+                icon={tech.icon}
+                name={tech.name}
+                slug={tech.slug}
+                className="h-10 w-10"
+              />
               <span className="font-mono text-[10px] uppercase tracking-wide text-on-surface-variant">
                 {tech.name}
               </span>

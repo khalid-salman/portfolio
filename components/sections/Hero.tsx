@@ -27,11 +27,11 @@ export function Hero() {
               <h1 className="text-balance text-4xl font-bold tracking-tight text-on-surface sm:text-5xl lg:text-6xl">
                 {owner.name}
               </h1>
-              <p className="terminal-line mt-6 max-w-2xl text-justify leading-relaxed">
+              <p className="terminal-line mt-6 max-w-2xl leading-relaxed">
                 &gt; {owner.tagline}
               </p>
               {owner.summary && (
-                <p className="mt-4 max-w-3xl text-justify text-sm leading-relaxed text-on-surface-variant md:text-base">
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-on-surface-variant md:text-base">
                   {owner.summary}
                 </p>
               )}
