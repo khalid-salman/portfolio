@@ -2,7 +2,10 @@ export interface Owner {
   name: string;
   title: string;
   tagline: string;
+  availability?: string;
   summary?: string;
+  summaries?: string[];
+  bestFit?: string;
   location: string;
   photo?: string;
 }
@@ -107,6 +110,7 @@ export interface ExperienceEntry {
   location: string;
   startDate: string;
   endDate: string;
+  employmentType?: string;
   highlights: string[];
   displayOrder?: number;
 }

@@ -62,7 +62,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <span className="font-mono text-xs text-on-surface-variant">{project.period}</span>
         )}
       </div>
-      <p className="mb-4 font-mono text-xs uppercase tracking-wide text-secondary">
+      <p className="mb-4 font-mono text-xs tracking-wide text-secondary">
         {project.role}
       </p>
 
@@ -101,6 +101,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <div>
           <h4 className="mb-1 text-[10px] uppercase tracking-widest text-on-surface-variant">
+            Outcome
+          </h4>
+          <p className="text-secondary">{project.outcome}</p>
+        </div>
+        <div>
+          <h4 className="mb-1 text-[10px] uppercase tracking-widest text-on-surface-variant">
             Solution
           </h4>
           <p className="text-on-surface-variant">{project.solution}</p>
@@ -114,12 +120,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <Badge key={tech}>{tech}</Badge>
             ))}
           </div>
-        </div>
-        <div>
-          <h4 className="mb-1 text-[10px] uppercase tracking-widest text-on-surface-variant">
-            Outcome
-          </h4>
-          <p className="text-secondary">{project.outcome}</p>
         </div>
       </div>
 

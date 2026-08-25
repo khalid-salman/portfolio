@@ -7,6 +7,12 @@ import { assetPath } from '@/lib/assetPath';
 
 export function Hero() {
   const { owner } = site;
+  const bodyParagraphs =
+    owner.summaries && owner.summaries.length > 0
+      ? owner.summaries
+      : owner.summary
+        ? [owner.summary]
+        : [];
 
   return (
     <section id="hero" className="relative scroll-mt-20 border-b border-border py-16 md:py-24">
@@ -14,10 +20,11 @@ export function Hero() {
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
             <MotionReveal>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-surface-container-high px-3 py-1.5">
-                <span className="pulse-dot" aria-hidden />
+              <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-secondary/30 bg-surface-container-high px-3 py-1.5">
+                <span className="pulse-dot shrink-0" aria-hidden />
                 <span className="font-mono text-xs text-secondary">
-                  Available for DevOps &amp; Cloud Engineering roles
+                  {owner.availability ??
+                    'Available for DevOps & Cloud Engineering roles — and contract/consulting engagements'}
                 </span>
               </div>
 
@@ -30,19 +37,22 @@ export function Hero() {
               <p className="terminal-line mt-6 max-w-2xl leading-relaxed">
                 &gt; {owner.tagline}
               </p>
-              {owner.summary && (
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-on-surface-variant md:text-base">
-                  {owner.summary}
+              {bodyParagraphs.map((paragraph) => (
+                <p
+                  key={paragraph.slice(0, 48)}
+                  className="mt-4 max-w-3xl text-sm leading-relaxed text-on-surface-variant md:text-base"
+                >
+                  {paragraph}
                 </p>
-              )}
+              ))}
               <p className="mt-4 flex items-center gap-2 text-sm text-on-surface-variant">
                 <MapPin className="h-4 w-4 shrink-0" aria-hidden />
                 {owner.location}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button href="#projects">&gt; View Case Studies</Button>
-                <Button variant="secondary" href="#contact">
-                  &gt; Get in Touch
+                <Button variant="secondary" href="#services">
+                  &gt; Hire Me / Start a Project
                 </Button>
                 <Button variant="ghost" href={assetPath('/resume.pdf')} download>
                   &gt; Download Resume
@@ -93,6 +103,12 @@ export function Hero() {
                       <dt className="text-on-surface-variant">Location</dt>
                       <dd className="text-on-surface">&gt; Riyadh, Saudi Arabia</dd>
                     </div>
+                    {owner.bestFit && (
+                      <div className="grid grid-cols-[90px_1fr] gap-3">
+                        <dt className="text-on-surface-variant">Best fit</dt>
+                        <dd className="text-on-surface">&gt; {owner.bestFit}</dd>
+                      </div>
+                    )}
                   </dl>
                 </div>
               </div>

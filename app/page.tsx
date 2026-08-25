@@ -1,5 +1,6 @@
 import { Hero } from '@/components/sections/Hero';
 import { ImpactStrip } from '@/components/sections/ImpactStrip';
+import { Services } from '@/components/sections/Services';
 import { Projects } from '@/components/sections/Projects';
 import { Skills } from '@/components/sections/Skills';
 import { TechLogos } from '@/components/sections/TechLogos';
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <ImpactStrip />
+      <Services />
       <Projects />
       <TechLogos />
       <Skills />

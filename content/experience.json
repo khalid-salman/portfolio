@@ -3,18 +3,21 @@
     "company": "Ebtekar Wakhthor LTD",
     "title": "DevOps & Cloud Infrastructure Engineer",
     "location": "Riyadh, Saudi Arabia",
+    "employmentType": "Full-Time",
     "startDate": "05/2025",
     "endDate": "Present",
     "highlights": [
       "Provisioned multi-tenant GCP and AWS environments with modular Terraform and Ansible — custom VPCs, Cloud NAT, and load balancers, reducing setup time by over 80%.",
-      "Managed multi-stage GitLab CI/CD for .NET and Python microservices with Artifact Registry publishing, build caching, and zero-downtime rollouts, cutting feedback loops by 60%."
+      "Managed multi-stage GitLab CI/CD for .NET and Python microservices with Artifact Registry publishing, build caching, and zero-downtime rollouts, cutting feedback loops by 60%.",
+      "Delivered client engagements including a 15M+ user banking archiving platform (Al Rajhi Bank) and an air-gapped GPU/GIS platform (Saudi Ministry) — see Case Studies above."
     ],
     "displayOrder": 1
   },
   {
     "company": "Raed IT Services",
-    "title": "Cloud Administrator & Infrastructure Engineer (Part-Time)",
+    "title": "Cloud Administrator & Infrastructure Engineer",
     "location": "Remote",
+    "employmentType": "Part-Time, Remote",
     "startDate": "01/2023",
     "endDate": "01/2026",
     "highlights": [

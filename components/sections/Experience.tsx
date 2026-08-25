@@ -15,7 +15,10 @@ export function Experience() {
                   {entry.startDate} – {entry.endDate}
                 </span>
               </div>
-              <p className="mt-1 text-sm text-primary-container">{entry.company}</p>
+              <p className="mt-1 text-sm text-primary-container">
+                {entry.company}
+                {entry.employmentType ? ` (${entry.employmentType})` : ''}
+              </p>
               <p className="text-sm text-on-surface-variant">{entry.location}</p>
               <ul className="mt-3 list-inside list-disc space-y-1 font-mono text-sm text-on-surface-variant">
                 {entry.highlights.map((highlight) => (

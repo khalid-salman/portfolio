@@ -2,8 +2,7 @@
   {
     "slug": "al-rajhi-tawtheeq",
     "title": "Enterprise Document Archiving System (Financial Sector)",
-    "role": "DevOps & OpenShift Engineer",
-    "period": "09/2025 – 04/2026",
+    "role": "Client engagement via Ebtekar Wakhthor LTD · 09/2025 – 04/2026 · DevOps & OpenShift Engineer",
     "problem": "A tier-1 banking ecosystem supporting 15M+ active users needed a compliant, repeatable deployment model for an enterprise document archiving platform across DEV, SIT, UAT, and PROD under strict financial regulatory SLAs.",
     "solution": "Managed multi-environment Red Hat OpenShift (OKD) infrastructure with fine-grained network isolation, RBAC, and Keycloak SSO. Integrated containerized workloads with IBM FileNet for document management, IBM MQ for transactional messaging, and RabbitMQ for microservice event queuing. Designed GitLab CI/CD pipelines with compliance and vulnerability scanning before every production release.",
     "stack": [
@@ -43,8 +42,7 @@
   {
     "slug": "saudi-ministry-gis",
     "title": "Enterprise GIS & Cloud Infrastructure (Government Sector)",
-    "role": "Lead Cloud & DevOps Engineer",
-    "period": "06/2025 – 03/2026",
+    "role": "Client engagement via Ebtekar Wakhthor LTD · 06/2025 – 03/2026 · Lead Cloud & DevOps Engineer",
     "problem": "Legacy GIS applications required modernization in a fully air-gapped government environment, including GPU-accelerated capacity and zero-trust ingress/egress controls.",
     "solution": "Architected air-gapped Kubernetes environments and GPU-accelerated clusters. Provisioned bare-metal GPU nodes and Kubernetes infrastructure using Python, Terraform, and Ansible. Implemented isolated network boundaries, internal DNS, and zero-trust ingress/egress policies for high-security compliance.",
     "stack": ["Kubernetes", "Terraform", "Ansible", "Python", "Zero Trust", "GPU", "GIS"],
@@ -80,11 +78,10 @@
   },
   {
     "slug": "clinic-plus",
-    "title": "Dual-Cloud SaaS Infrastructure & AI Platform",
-    "role": "DevOps & Cloud Architect",
-    "period": "05/2026 – 08/2026",
+    "title": "Clinic+ — Dual-Cloud SaaS Infrastructure & AI Platform",
+    "role": "Independent / freelance project, part-time · 05/2026 – 08/2026 · DevOps & Cloud Architect",
     "problem": "Healthcare SaaS platform required a dual-cloud production ecosystem with strict staging/production isolation, zero-downtime releases, and a production AI workload behind secure gateways.",
-    "solution": "Architected staging on Hetzner Cloud and live microservices on GKE. Built self-hosted GitHub Actions runners for container builds, database migrations, and zero-downtime GKE deployments. Hardened workloads with Cloud Armor, RBAC, health probes, and Cloud Monitoring.",
+    "solution": "Architected staging on Hetzner Cloud and live microservices on GKE, as a self-directed build outside full-time work hours. Built self-hosted GitHub Actions runners for container builds, database migrations, and zero-downtime GKE deployments. Hardened workloads with Cloud Armor, RBAC, health probes, and Cloud Monitoring.",
     "stack": ["GCP", "GKE", "Hetzner Cloud", "Terraform", "GitHub Actions", "Cloud Armor", "FastAPI"],
     "outcome": "Cut infrastructure setup time by 80%+ with modular Terraform, and reduced staging-to-production deployment cycles from hours to under 10 minutes with forward-only migrations and rolling GKE updates.",
     "confidentiality": "public",
@@ -127,7 +124,7 @@
   {
     "slug": "observability-stack",
     "title": "Production Observability Stack",
-    "role": "Platform Engineer · Raed IT Services",
+    "role": "Platform Engineer, Raed IT Services (Part-Time, Remote)",
     "period": "01/2023 – 01/2026",
     "problem": "Hybrid Hetzner and GCP infrastructure lacked unified observability — cross-service outages were detected late and root cause was slow to identify.",
     "solution": "Deployed Prometheus, Grafana, Loki, and Alertmanager alongside GCP Cloud Monitoring and Cloud Logging for distributed metrics, centralized log aggregation, and actionable alerting across hybrid workloads.",

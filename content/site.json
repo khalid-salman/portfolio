@@ -2,14 +2,19 @@
   "owner": {
     "name": "Khalid Salman",
     "title": "Senior DevOps, OpenShift & Kubernetes Engineer",
-    "tagline": "Designing high availability, secure, and automated cloud infrastructure for enterprise banking, government, and dual cloud platforms.",
-    "summary": "DevOps & Cloud Infrastructure Engineer specializing in Google Cloud Platform (GCP), AWS, and enterprise Kubernetes/OpenShift orchestration. Proven expertise in architecting zero trust cloud network topologies, designing production grade Infrastructure as Code (IaC) via Terraform and Ansible, and building resilient Python driven CI/CD delivery pipelines. Demonstrated success integrating OpenShift workloads with IBM FileNet, IBM MQ, and RabbitMQ, migrating on premises microservices to containerized GKE clusters, securing air gapped networks, and maintaining 99.9% availability across multi cloud and high performance GPU cluster infrastructures.",
+    "availability": "Available for DevOps & Cloud Engineering roles — and contract/consulting engagements",
+    "tagline": "Building high-availability, secure cloud infrastructure for enterprise banking, government, and healthcare platforms.",
+    "summaries": [
+      "DevOps & Cloud Infrastructure Engineer specializing in Google Cloud Platform, AWS, and enterprise Kubernetes/OpenShift orchestration. I design zero-trust network topologies, production-grade Infrastructure as Code with Terraform and Ansible, and Python-driven CI/CD pipelines that ship containerized workloads without downtime.",
+      "My work spans integrating OpenShift with IBM FileNet and IBM MQ for tier-1 banking, migrating on-prem microservices to GKE, and securing air-gapped GPU clusters for government platforms with a track record of 99.9% uptime across multi-cloud, high-compliance environments."
+    ],
+    "bestFit": "Senior DevOps / Platform Engineering roles in regulated environments (banking, government, healthcare)",
     "location": "Riyadh, Saudi Arabia",
     "photo": "/images/khalid-salman.png"
   },
   "seo": {
-    "title": "Khalid Salman — Senior DevOps & OpenShift Engineer",
-    "description": "Senior DevOps Engineer: OpenShift, Kubernetes, IBM MQ, FileNet, Terraform, GKE. CKA certified. Banking & government platforms.",
+    "title": "Khalid Salman — Senior DevOps & OpenShift Engineer | GCP, AWS, Kubernetes",
+    "description": "Senior DevOps & Cloud Engineer — 15M+ user banking platforms, 99.9% uptime, air-gapped GPU infrastructure. OpenShift, Kubernetes, Terraform. CKA & AWS certified. Available for hire and contract engagements.",
     "ogImage": "/images/khalid-salman.png"
   },
   "contact": {

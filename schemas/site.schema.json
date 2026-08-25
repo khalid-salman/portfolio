@@ -11,8 +11,16 @@
       "properties": {
         "name": { "type": "string", "minLength": 1 },
         "title": { "type": "string", "minLength": 1 },
-        "tagline": { "type": "string", "maxLength": 200 },
+        "availability": { "type": "string", "maxLength": 160 },
+        "tagline": { "type": "string", "maxLength": 240 },
         "summary": { "type": "string", "maxLength": 800 },
+        "summaries": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 20 },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "bestFit": { "type": "string", "maxLength": 200 },
         "location": { "type": "string" },
         "photo": { "type": "string", "pattern": "^/" }
       }
@@ -21,8 +29,8 @@
       "type": "object",
       "required": ["title", "description"],
       "properties": {
-        "title": { "type": "string", "maxLength": 70 },
-        "description": { "type": "string", "maxLength": 160 },
+        "title": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 300 },
         "ogImage": { "type": "string", "pattern": "^/" }
       }
     },
