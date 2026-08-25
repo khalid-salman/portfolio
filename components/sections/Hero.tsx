@@ -89,7 +89,7 @@ export function Hero() {
                   <dl className="space-y-3 font-mono text-xs">
                     <div className="grid grid-cols-[90px_1fr] gap-3">
                       <dt className="text-on-surface-variant">Experience</dt>
-                      <dd className="text-secondary">&gt; 4+ Years Cloud/DevOps</dd>
+                      <dd className="text-secondary">&gt; 5+ Years Cloud/DevOps</dd>
                     </div>
                     <div className="grid grid-cols-[90px_1fr] gap-3">
                       <dt className="text-on-surface-variant">Top Tools</dt>
