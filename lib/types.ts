@@ -66,6 +66,11 @@ export interface ProjectSnippet {
   code: string;
 }
 
+export interface ProjectGallery {
+  label?: string;
+  images: DiagramRef[];
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -79,6 +84,7 @@ export interface Project {
   diagram: DiagramRef;
   architectureDiagram?: DiagramRef;
   screenshot?: DiagramRef;
+  gallery?: ProjectGallery;
   metrics?: ProjectMetric[];
   artifacts?: ProjectArtifact[];
   snippets?: ProjectSnippet[];

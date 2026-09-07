@@ -123,19 +123,48 @@
   },
   {
     "slug": "observability-stack",
-    "title": "Production Observability Stack",
+    "title": "Production Observability & Monitoring",
     "role": "Platform Engineer, Raed IT Services (Part-Time, Remote)",
     "period": "01/2023 – 01/2026",
-    "problem": "Hybrid Hetzner and GCP infrastructure lacked unified observability — cross-service outages were detected late and root cause was slow to identify.",
-    "solution": "Deployed Prometheus, Grafana, Loki, and Alertmanager alongside GCP Cloud Monitoring and Cloud Logging for distributed metrics, centralized log aggregation, and actionable alerting across hybrid workloads.",
+    "problem": "Hybrid Hetzner and GCP workloads had fragmented metrics and logs — incidents surfaced late, and engineers jumped between tools to correlate request rate, latency, and application errors.",
+    "solution": "Built a production Grafana + Prometheus + Loki stack as a single pane of glass. Prometheus scrapes FastAPI, Postgres, MongoDB, and exporter targets for golden signals (traffic, latency, errors, saturation). Loki centralizes application and database logs so spikes on a Grafana panel jump straight to the matching log line. Alertmanager routes actionable pages when SLOs breach. Dashboards cover FastAPI request/P99 latency, process CPU/memory/GC, Postgres log triage, and business evaluation views for stakeholders.",
     "stack": ["Prometheus", "Grafana", "Loki", "Alertmanager", "GCP Monitoring", "Hetzner Cloud"],
-    "outcome": "Improved cross-service outage detection and faster incident identification across hybrid production infrastructure, supporting a sustained 99.9% availability target.",
+    "outcome": "Unified metrics, logs, and alerts across hybrid production — faster outage detection, clearer root-cause paths from dashboard to logs, and sustained 99.9% availability targeting.",
     "confidentiality": "public",
     "metrics": [
       { "value": "99.9%", "label": "Availability target held" },
       { "value": "Hybrid", "label": "Hetzner + GCP coverage" },
       { "value": "Unified", "label": "Metrics + logs + alerts" }
     ],
+    "gallery": {
+      "label": "Observability Samples — Grafana · Prometheus · Loki",
+      "images": [
+        {
+          "path": "/projects/grafana-fastapi-observability.png",
+          "alt": "Grafana FastAPI Observability — request rate, P99 latency, and error ratios"
+        },
+        {
+          "path": "/projects/grafana-fastapi-metrics.png",
+          "alt": "Grafana FastAPI Metrics — throughput, latency, response size, CPU and memory"
+        },
+        {
+          "path": "/projects/grafana-fastapi-runtime.png",
+          "alt": "Grafana runtime panels — memory, CPU, file descriptors, GC rate, and error %"
+        },
+        {
+          "path": "/projects/grafana-postgres-logs.png",
+          "alt": "Grafana Loki Postgres DB Logs — permission errors surfaced for triage"
+        },
+        {
+          "path": "/projects/prometheus-targets.jpeg",
+          "alt": "Prometheus scrape targets — FastAPI, Postgres, MongoDB, and exporter health"
+        },
+        {
+          "path": "/projects/grafana-yearly-evaluation.png",
+          "alt": "Grafana yearly evaluation dashboard — business metrics over multi-year windows"
+        }
+      ]
+    },
     "diagram": {
       "path": "/projects/observability-stack-flow.jpg",
       "alt": "Production observability stack flow — Prometheus, Grafana, Loki, and Alertmanager across hybrid infrastructure"

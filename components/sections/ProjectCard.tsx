@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
+import { ImageSlideshow } from '@/components/ui/ImageSlideshow';
 import { assetPath } from '@/lib/assetPath';
 import type { Project, ProjectSnippet } from '@/lib/types';
 
@@ -79,6 +80,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </p>
             </div>
           ))}
+        </div>
+      )}
+
+      {project.gallery && project.gallery.images.length > 0 && (
+        <div className="mb-6">
+          <ImageSlideshow
+            label={project.gallery.label ?? 'Observability Samples'}
+            images={project.gallery.images}
+          />
         </div>
       )}
 

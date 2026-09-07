@@ -84,6 +84,18 @@ for (const project of projects) {
       failed = true;
     }
   }
+
+  if (project.gallery?.images) {
+    for (const image of project.gallery.images) {
+      const galleryPath = join(root, 'public', image.path.replace(/^\//, ''));
+      if (!existsSync(galleryPath)) {
+        console.error(
+          `✗ Missing gallery image for project "${project.slug}": expected public${image.path}`,
+        );
+        failed = true;
+      }
+    }
+  }
 }
 
 const technologiesDoc = loadJson('content/technologies.json');
